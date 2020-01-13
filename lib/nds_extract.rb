@@ -49,8 +49,11 @@ def movies_with_director_key(name, movies_collection)
   # :director_name key. This addition can be done by using the provided
   # movie_with_director_name method
   
-  
-  
+  result = []
+  for movie in movies_collection[name] do
+    result.push({:director_name => name, :movie => movie})
+  end
+  result
 end
 
 

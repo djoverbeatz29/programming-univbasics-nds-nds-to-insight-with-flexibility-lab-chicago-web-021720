@@ -50,7 +50,7 @@ def movies_with_director_key(name, movies_collection)
   # movie_with_director_name method
   
   result = []
-  for movie in movies_collection[name] do
+  for movie in movies_collection do
     result.push({:director_name => name, :movie => movie})
   end
   result

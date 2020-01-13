@@ -96,6 +96,8 @@ def movies_with_directors_set(source)
   result = []
   for director_info in source do
     result.push(movies_with_director_key(director_info[:name], director_info[:movies]))
+  end
+  result
 end
 
 # ----------------    End of Your Code Region --------------------

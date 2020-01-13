@@ -51,10 +51,7 @@ def movies_with_director_key(name, movies_collection)
   
   result = []
   for movie in movies_collection do
-    result.push({
-      :director_name => name,
-      :movie => movie_with_director_name(name, movie)
-    })
+    result.push(movie_with_director_name(name, movie))
   end
   result
 end

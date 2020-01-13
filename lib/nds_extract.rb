@@ -51,7 +51,10 @@ def movies_with_director_key(name, movies_collection)
   
   result = []
   for movie in movies_collection do
-    result.push({:director_name => name, :movie => movie})
+    result.push({
+      :director_name => name,
+      :movie => movie_with_director_name(name, movie)
+    })
   end
   result
 end
@@ -69,6 +72,10 @@ def gross_per_studio(collection)
   #
   # Hash whose keys are the studio names and whose values are the sum
   # total of all the worldwide_gross numbers for every movie in the input Hash
+  
+  result = {}
+  for movie in collection do
+    
 end
 
 def movies_with_directors_set(source)
